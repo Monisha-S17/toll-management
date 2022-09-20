@@ -1,0 +1,354 @@
+*{   
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+button:focus-visible{
+    outline: 1px solid #377EF6;
+    border: none !important;
+}
+
+input [type=number]{
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input,select option{
+    padding: 5px;
+    height: 20px;
+}
+select{
+    padding: 5px;
+    height:32px
+
+}
+
+ h4{
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.cross-icon{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top:10px;
+    right: 25px;
+    cursor: pointer;
+}
+.cross-icon span{
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+
+}
+.container{
+    margin: auto;
+    max-width: 1200px;
+    min-width: 300px;
+    border-top: 2px solid #d7d7d7;
+    padding: 10px 15px;
+    
+}
+
+/* start nav bar style */
+
+nav{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+@media only screen and (max-width:500px){
+    nav{
+        flex-direction: column;        
+    }
+    nav .navSearchBar, nav .nav-rightSide{
+        margin: 5px;
+    }
+
+}
+.navSearchBar{
+    display: flex;
+    align-items: center;
+}
+.navSearchBar div{
+ margin: auto 10px;
+}
+.nav-rightSide{
+    display: flex;
+    align-items: center;
+}
+nav h5{
+    font-size: 14px;
+    float: left;
+    margin: auto 5px;
+
+}
+
+.filter-icon{
+    color: #9f9f9f;
+}
+.filter-icon button{
+    background-color: transparent;
+    color: #9f9f9f;
+    position: relative;
+}
+#dropdown{
+    display: none;
+    left:150px;
+    /* border: 1px solid #fff; */
+    color:#000;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    overflow:auto;  
+    border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+
+
+}
+.error, .errormsg{
+    display: none;
+    color:#ff0000;
+}
+/* .errorPart{
+    display:block;
+} */
+#dropdown ul li{
+    text-transform: capitalize;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+#dropdown ul li:hover{
+    background-color: #ddd;
+}
+/* start search bar design */
+
+.search-bar{
+    display: flex;
+    border:1px solid #aaaa;
+    margin: auto 5px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    float: left;
+    align-items: center;
+
+}
+.search-bar #search-box input{
+    border: none;
+    padding: 2px 5px;
+    width: 100%;
+    
+}
+.search-bar #search-box input:focus-visible{
+    outline: none;
+}
+
+.search-bar  i{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: #9f9f9f;
+}
+
+.search-bar i:focus-visible{
+    outline: none;
+    border: none;
+}
+.search-bar #search-box{
+    margin: 0;
+    padding: 0;
+}
+/* End search bar design */
+.template-container div .nav-button{
+    padding: 3px;
+    background-color: #377EF6;
+    border: 1px solid #377EF6;
+    border-radius: 2px;
+    color: #fff;
+    margin: auto 5px;
+
+    
+}
+/* End nav bar styles */
+/* start template body style */
+.model-template{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.template-body table thead{
+    background-color:  #aaaa;
+    border: none;
+}
+
+.template-body table thead th{
+    border: none;
+}
+
+.template-body table,.template-body table th, .template-body table td{
+    border-bottom: 2px solid #aaa;
+    border-collapse: collapse;
+
+}
+
+.template-body table th, .template-body table td{
+    padding: 10px 5px;
+}
+
+.template-body table tr th{
+    line-height: 2;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.template-body table tr {
+line-height: 3;
+text-align: center;}
+/* End template body style */
+
+/* Start add vecihle popup design */
+.model-template-1{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.vehicle-template{   
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    max-width: 350px;
+
+    border: 1px solid #888;
+    width: 30%;
+    
+    
+}
+/* .vehicle-template  */
+
+
+.vehicle-template form {
+}
+.vehicle-template form div{
+    margin: 17px 10px ;
+    display: flex;
+    flex-direction: column;
+}
+
+ .vehicle-template form div input, .vehicle-template form div select option{
+    padding: 5px;
+    height: 20px;
+}
+
+
+.vehicle-template form button:focus-visible{
+    outline: none;
+    border:none
+}
+.block{
+    width: 100%;
+    height: 30px;
+    border:none;
+    background-color: #377EF6;
+    
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px auto;
+}
+.block :focus-visible{
+    outline: none;
+}
+/* End add vecihle popup design */
+
+/* start Add toll template */
+.toll-template{
+   position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+.toll-template form{
+    margin: 15px 5px 5px 5px;
+
+}
+.toll-template form div #toll-name{
+    width:90%;
+
+}
+.toll-vehicle-charge-inform{
+    margin-top:15px ;
+
+}
+.vehicle-charge-list{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+}
+.vehicles-charge-list{
+    display: flex;
+    flex-direction: row;
+}
+.vehicles-charge-list select{
+    width: 100px;
+
+}
+.vehicles-charge-list select options{
+    height: 25px;
+    width: 100%;
+
+}
+/* .vehicle-charge-list div input{
+
+    margin: auto 10px;
+} */
+.vehicle-charge-list div{
+    
+    display: flex;
+}
+.vehicle-charge-list div input{
+    width: 100%;
+    margin:5px 10px ;
+}
+.vehicle-charge-list div select{
+    width: 130px;
+    margin:5px 10px  5px 0px;
+    height: 35px;
+}
+/* End Add toll template */
+#back-to-home{
+    display: none;
+}

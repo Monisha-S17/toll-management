@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toll Management</title>
+
+    <!-- link style page -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="template-container">
+            <nav>
+                <div class="navSearchBar" id="navSearchBar">
+                    
+                </div>
+                <div class="nav-rightSide">
+                    <div>
+                        <button type="button" class="nav-button" onclick="addNewVehicle()">Add vehicle entry</button>
+                    </div>
+                    <div>
+                        <button type="button" class="nav-button" onclick="addToll()">Add new toll</button>
+                    </div>
+                    <div>
+                        <button type="button" class="nav-button" id="toll-detail-button" onclick="tollDetails()">View all toll</button>
+                    </div>
+                    <div>
+                        <button type="button" class="nav-button" id="back-to-home" onclick="vehicleDetail()">Back to vehicle logs</button>
+                    </div>
+                </div>
+            </nav>
+            <div class="template-body">
+                <table width="100%" class="vehicle-list">          
+                    
+                    
+                </table>
+
+            </div>
+            
+            <div class="model-template" id="vehicle-add-template">
+                <div class="vehicle-template"  >
+                    <button class="cross-icon" onclick="vehicleAddTemplateClose()">
+                        <span class="">X</span>
+                    </button>
+                    <h4>Add new Entry</h4>
+                    <form id="vehicleModal">
+                        <div>
+                            <label for="toll-namelist">Select Toll Name</label>
+                            <select name="toll-name" id="toll-namelist" onchange="costInput()"  required>
+                                <option value='' selected="selected">Select Toll Name</option>
+                            </select>
+                            <span class="error">Please Select the toll name</span>
+
+                        </div>
+                        <div>
+                            <label for="vehicle-type">Select Vehicle Type*</label>
+                            <select name="vehicle-type" id="vehicle-type" onchange="costInput()"  required>
+                                <option value="" disabled selected>Select the option</option>
+                                <option value="0">Car/Jeep/Van</option>
+                                <option value="1">LCV</option>
+                                <option value="2">Truck/Bus</option>
+                                <option value="3">Heavy vehicle</option>
+                            </select>
+                            <span class="error">Please Select the vehicle type</span>
+                        </div>
+                        <div>
+                            <label for="vehicle-number">Vehicle Number*</label>
+                            <input type="text" id="vehicle-number" name="vehicle-number" placeholder="Enter yout login id" onblur="isVehicleCrossedBeforeHour()"/>
+                            <span class="error">Please enter vehicle number</span>
+
+                        </div>
+                        <div>
+                            <label for="tariff">Tariff*</label>
+                            <input type="number" id="tariff" name="tariff" placeholder="Tariff Amount"/>
+                                                        
+
+                        </div>
+                        <button class="block" type="button" onclick="addVehicle()">Add Entry</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- start add toll information template  -->
+            <div class="model-template-1" id="toll-add-template">
+                <div class="toll-template">
+                    <h4>Add new toll</h4>
+                    <button class="cross-icon " onclick="vehicleAddTemplateClose()">
+                        <span>X</span>
+                    </button>
+                    <form id="tollModel">
+                        <div>
+                            <label for="toll-name">Toll name <span>*</span></label>
+                            <input type="text" id="toll-name" placeholder="Enter Toll name" autocomplete="off">
+                            <span class="errormsg"> Please Endter toll name</span>
+                        </div>
+                        <div class="toll-vehicle-charge-inform">
+                            <span>Vehicle fare details <span>*</span></span>
+                            <div class="vehicle-charge-list" >
+  
+                            </div>
+                        </div>
+                        <button class="block" type="button" onclick="addTollDetails()">Add Details</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- End add toll information template -->
+        </div>
+
+    </div>
+    <script src="/assets/js/script.js">
+       
+    </script>
+</body>
+</html>
